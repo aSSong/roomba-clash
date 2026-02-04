@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ff4o5717ttfc"]
+
+[ext_resource type="Texture2D" uid="uid://q8a830854iuk" path="res://Assets/Textures/Prototype/grid_black_512x512.png" id="1_qu4ev"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4e7u"]
+albedo_texture = ExtResource("1_qu4ev")
+uv1_triplanar = true
+
+[node name="Arena_test" type="Node3D" unique_id=1232603008]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1373790489]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Node3D" unique_id=544277661]
+use_collision = true
+collision_layer = 2
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D/CSGCombiner3D" unique_id=1779526806]
+size = Vector3(50, 1, 50)
+material = SubResource("StandardMaterial3D_l4e7u")
