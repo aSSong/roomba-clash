@@ -44,4 +44,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054, -0.260519)
 mesh = SubResource("CylinderMesh_a3d8c")
 
 [node name="Cat_L" parent="." unique_id=1304147224 instance=ExtResource("1_uvnfx")]
-transform = Transform3D(-1.8, 0, -2.7179243e-07, 0, 1.8, 0, 2.7179243e-07, 0, -1.8, 0.029011726, 0.050249726, 0.024010837)
+transform = Transform3D(-1.9, 0, -2.8689203e-07, 0, 1.9, 0, 2.8689203e-07, 0, -1.9, 0.029011726, 0.050249726, 0.024010837)
