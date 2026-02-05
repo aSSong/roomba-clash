@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c0fapp51hmguy"]
+
+[ext_resource type="PackedScene" uid="uid://mt2xww3im37m" path="res://Scenes/Player/cat_lowpoly/cat_l.tscn" id="1_uvnfx"]
+
+[sub_resource type="GDScript" id="GDScript_tugb3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tugb3"]
+height = 0.1
+radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tugb3"]
+diffuse_mode = 3
+albedo_color = Color(0.5350234, 0.53502345, 0.5350234, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tugb3"]
+material = SubResource("StandardMaterial3D_tugb3")
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvnfx"]
+albedo_color = Color(0.13863751, 0.13863748, 0.13863748, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a3d8c"]
+material = SubResource("StandardMaterial3D_uvnfx")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.03
+
+[node name="Player" type="RigidBody3D" unique_id=513166458]
+collision_mask = 3
+script = SubResource("GDScript_tugb3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1307582738]
+shape = SubResource("CylinderShape3D_tugb3")
+
+[node name="RoboVac" type="Node3D" parent="." unique_id=1817838411]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RoboVac" unique_id=918532878]
+mesh = SubResource("CylinderMesh_tugb3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RoboVac" unique_id=1665576175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054, -0.260519)
+mesh = SubResource("CylinderMesh_a3d8c")
+
+[node name="Cat_L" parent="." unique_id=1304147224 instance=ExtResource("1_uvnfx")]
+transform = Transform3D(-1.8, 0, -2.7179243e-07, 0, 1.8, 0, 2.7179243e-07, 0, -1.8, 0.029011726, 0.050249726, 0.024010837)
